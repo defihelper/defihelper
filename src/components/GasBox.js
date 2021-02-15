@@ -1,7 +1,6 @@
-import { Box } from 'components'
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { fonts, color } from 'themes'
+import { Box } from './atoms'
 
 const Container = styled(Box)`
   display: flex;
@@ -34,28 +33,28 @@ const GasBoxLabel = styled(Box)`
 
 const GasBoxValue = styled.div`
   flex-grow: 1;
-  font-family: ${fonts.metropolisBold};
+  font-weight: 600;
   font-size: 24px;
   line-height: 34px;
 
   ${({ variant }) =>
     variant === 'primary'
       ? css`
-          color: ${color.primary};
+          color: ${props => props.theme.colors.primary};
         `
       : ''}
   ${({ variant }) =>
     variant === 'danger'
       ? css`
-          color: ${color.danger};
+          color: ${props => props.theme.colors.danger};
         `
       : ''}
 `
 
 function GasBox ({ label, value, variant, size }) {
   return (
-    <Container size={size} tint={2} className='text-center'>
-      <GasBoxLabel tint={3}>{label}</GasBoxLabel>
+    <Container size={size} className='text-center'>
+      <GasBoxLabel>{label}</GasBoxLabel>
       <GasBoxValue variant={variant}>{value}</GasBoxValue>
     </Container>
   )

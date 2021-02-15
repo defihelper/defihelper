@@ -1,12 +1,12 @@
 import { Box } from 'components'
 import React from 'react'
 import styled from 'styled-components'
-import { color, fonts } from 'themes'
+import { colors } from 'themes'
 
 const Container = styled(Box)`
-  color: ${color.white};
+  color: ${colors.white};
   display: inline-block;
-  font-family: ${fonts.metropolisBold};
+  font-weight: 700;
   font-size: 0.75rem;
   padding: 6px 8px;
   margin: 0 8px;
@@ -14,7 +14,7 @@ const Container = styled(Box)`
   transition: background-color 250ms cubic-bezier(0.95, 0.05, 0.8, 0.04);
 
   :hover {
-    background-color: ${color.primary};
+    background-color: ${colors.primary};
   }
 
   :first-child {

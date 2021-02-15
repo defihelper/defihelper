@@ -1,4 +1,4 @@
-export { default as Box } from './Box'
+export { default as Box } from './atoms/Box'
 export { default as GasBox } from './GasBox'
 export { default as Header } from './Header'
 export { default as Label } from './Label'
