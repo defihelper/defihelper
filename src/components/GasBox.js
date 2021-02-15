@@ -1,7 +1,7 @@
 import { Box } from 'components'
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { fonts, color } from 'theme'
+import { fonts, color } from 'themes'
 
 const Container = styled(Box)`
   display: flex;
@@ -10,13 +10,19 @@ const Container = styled(Box)`
   min-height: 66px;
   width: 100%;
 
-  ${({ size }) => size === 'medium' ? css`
-    min-width: 142px;
-  ` : ''}
+  ${({ size }) =>
+    size === 'medium'
+      ? css`
+          min-width: 142px;
+        `
+      : ''}
 
-  ${({ size }) => size === 'large' ? css`
-    min-width: 286px;
-  ` : ''}
+  ${({ size }) =>
+    size === 'large'
+      ? css`
+          min-width: 286px;
+        `
+      : ''}
 `
 
 const GasBoxLabel = styled(Box)`
@@ -32,8 +38,18 @@ const GasBoxValue = styled.div`
   font-size: 24px;
   line-height: 34px;
 
-  ${({ variant }) => variant === 'primary' ? css`color: ${color.primary};` : ''}
-  ${({ variant }) => variant === 'danger' ? css`color: ${color.danger};` : ''}
+  ${({ variant }) =>
+    variant === 'primary'
+      ? css`
+          color: ${color.primary};
+        `
+      : ''}
+  ${({ variant }) =>
+    variant === 'danger'
+      ? css`
+          color: ${color.danger};
+        `
+      : ''}
 `
 
 function GasBox ({ label, value, variant, size }) {
